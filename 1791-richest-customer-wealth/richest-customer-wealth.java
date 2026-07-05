@@ -7,7 +7,7 @@ class Solution {
            int  sum=0;
             for(int j=0;j<accounts[i].length;j++){
              sum+=accounts[i][j];
-              accounts[i][j]=sum;  
+             // accounts[i][j]=sum;  
               
             }
             if(max<sum){
