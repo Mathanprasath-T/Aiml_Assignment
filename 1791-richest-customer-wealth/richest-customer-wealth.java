@@ -10,13 +10,15 @@ class Solution {
               result[i][j]=sum;  
               
             }
-        }
-        for(int k=0;k<result.length;k++){
-            for(int l=0;l<result[k].length;l++){
-                if(result[l][k]>max){
-                    max=result[l][k];
-                }
+            if(max<sum){
+                max=sum;
             }
+        }return max;}        // for(int k=0;k<result.length;k++){
+        //     for(int l=0;l<result[k].length;l++){
+        //         if(result[l][k]>max){
+        //             max=result[l][k];
+        //         }
+        //     }
         }
-        return max;
-    }}
+        
+    
