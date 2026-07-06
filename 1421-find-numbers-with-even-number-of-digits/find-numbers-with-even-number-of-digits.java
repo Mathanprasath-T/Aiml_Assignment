@@ -6,7 +6,6 @@ class Solution {
              int digit=0;
             if(nums[i]!=0){
                 for(int j=nums[i];j!=0;j=j/10){
-                 
                  digit++;
                 // digit=1;
             }
