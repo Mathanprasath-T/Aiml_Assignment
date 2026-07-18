@@ -29,6 +29,6 @@ public class Solution {
             else{
             p2=p2.next;
             }
-        }return p1;
+        }return p2;
     }
 }
