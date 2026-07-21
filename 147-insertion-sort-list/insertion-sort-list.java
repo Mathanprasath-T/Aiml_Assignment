@@ -10,26 +10,39 @@
  */
 class Solution {
     public ListNode insertionSortList(ListNode head) {
-        if(head==null){
-            return head;
-        }
-        boolean swapped;
-        do{
-            swapped =false;
-        
-        ListNode temp=head;
-        while(temp!=null && temp.next!=null){
-            if(temp.val>temp.next.val){
-                int ans=temp.val;
-                temp.val=temp.next.val;
-                temp.next.val=ans;
-                swapped=true;
+
+        ListNode dummy=new ListNode(0);
+        while(head!=null){
+            ListNode curr=head;
+            ListNode prev=dummy;
+            head=head.next;
+            while(prev.next!=null && prev.next.val<curr.val){
+                prev=prev.next;
             }
-            temp=temp.next;
+        curr.next=prev.next;
+        prev.next=curr;
         }
-        }
-        while(swapped);
-        return head;
+        return dummy.next;
+    }}
+        // if(head==null){
+        //     return head;
+        // }
+        // boolean swapped;
+        // do{
+        //     swapped =false;
+        
+        // ListNode temp=head;
+        // while(temp!=null && temp.next!=null){
+        //     if(temp.val>temp.next.val){
+        //         int ans=temp. al;
+        //         temp.val=temp.next.val;
+        //         temp.next.val=ans;
+        //         swapped=true;
+        //     }
+        //     temp=temp.next;
+        // }
+        // }
+        // while(swapped);
+        // return head;
     
-}
-}
+
